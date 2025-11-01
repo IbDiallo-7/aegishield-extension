@@ -1,0 +1,69 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Chrome extension specific
+*.crx
+*.pem
+*.zip
+web-ext-artifacts/
+
+# Compiled CSS (if you want to generate it fresh)
+# Uncomment the line below if you prefer to generate main.css during build
+# assets/css/main.css
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# MacOS metadata
+__MACOSX/
+
+# Lock files (uncomment if using yarn)
+# yarn.lock
+

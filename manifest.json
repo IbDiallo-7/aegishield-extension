@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "AegiShield AI",
+  "version": "1.0.0",
+  "description": "Your privacy co-pilot. Prevents accidental sharing of sensitive information with AI-powered detection and one-click anonymization.",
+  "permissions": [
+    "sidePanel",
+    "tabs",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open AegiShield AI",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/js/content_script.js"],
+      "css": ["assets/css/shield_icon.css", "assets/css/dialog.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/js/services/privacy-detector.js",
+        "assets/js/services/ai-detector.js",
+        "assets/js/privacy-dialog.js",
+        "assets/fontawesome/css/all.min.css",
+        "assets/fontawesome/webfonts/fa-brands-400.woff2",
+        "assets/fontawesome/webfonts/fa-regular-400.woff2",
+        "assets/fontawesome/webfonts/fa-solid-900.woff2",
+        "assets/fontawesome/webfonts/fa-v4compatibility.woff2",
+        "icons/aegis-shield-logo.svg",
+        "icons/aegis-shield-logo-white.svg"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

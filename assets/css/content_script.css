@@ -1,0 +1,41 @@
+/* assets/css/content_script.css */
+
+/*
+ * Styles for the iframe that holds our injected UI.
+ * Using an iframe is crucial for isolating our styles from the host page's CSS.
+ */
+
+ #cognispace-privacy-popup {
+    /* Base styles */
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    transition: width 200ms ease-in-out, height 200ms ease-in-out, box-shadow 200ms ease-in-out, border-radius 200ms ease-in-out;
+    animation: fadeInScale 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Initial state: A small, circular icon */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Expanded state: A larger panel */
+#cognispace-privacy-popup.open {
+    width: 300px;
+    height: 280px; /* Increased height for better usability */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Entrance animation for the icon */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

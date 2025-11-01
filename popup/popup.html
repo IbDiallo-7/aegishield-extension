@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AegiShield</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            width: 320px; 
+            min-height: 180px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1E1F29 0%, #121217 100%);
+            color: #F1F1F5;
+            display: flex;
+            flex-direction: column;
+        }
+        .popup-container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 4px 12px rgba(74, 85, 255, 0.4));
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #4A55FF 0%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tagline {
+            font-size: 12px;
+            color: #8A8B9E;
+            margin-bottom: 16px;
+        }
+        .loading {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #8A8B9E;
+            font-size: 13px;
+        }
+        .spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid #2D2E3D;
+            border-top-color: #4A55FF;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .footer {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #2D2E3D;
+            font-size: 11px;
+            color: #8A8B9E;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container">
+        <div class="logo">
+            <img src="../icons/aegis-shield-logo.svg" alt="AegiShield AI" style="width: 40px; height: 40px;">
+        </div>
+        <h1>AegiShield AI</h1>
+        <p class="tagline">Your Privacy Co-Pilot</p>
+        <div class="loading">
+            <div class="spinner"></div>
+            <span>Opening side panel...</span>
+        </div>
+        <div class="footer">
+            Protecting your privacy, one click at a time
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

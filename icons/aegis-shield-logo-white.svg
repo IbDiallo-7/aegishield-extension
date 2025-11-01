@@ -1,0 +1,110 @@
+<svg width="256" height="256" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+ 
+    <defs>
+        
+        <linearGradient id="shieldGradientWhite" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="50%" stop-color="#F8F9FA"/>
+            <stop offset="100%" stop-color="#F1F3F5"/>
+        </linearGradient>
+        
+        
+        <linearGradient id="shineGradientWhite" x1="50" y1="10" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+        </linearGradient>
+        
+       
+        <radialGradient id="sparkGradientWhite" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#6366F1"/>
+            <stop offset="70%" stop-color="#8B92FC"/>
+            <stop offset="100%" stop-color="#A5B4FC"/>
+        </radialGradient>
+        
+        
+        <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        
+        
+        <filter id="outerGlowWhite" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+            <feFlood flood-color="#FFFFFF" flood-opacity="0.3"/>
+            <feComposite in2="blur" operator="in" result="glow"/>
+            <feMerge>
+                <feMergeNode in="glow"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        
+     </defs>
+    
+    
+    
+    <g filter="url(#shadow)">
+        <path 
+            d="M50 95C50 95 85 80 85 50V20C85 15 80 10 75 10H25C20 10 15 15 15 20V50C15 80 50 95 50 95Z"
+            fill="url(#shieldGradientWhite)"
+            filter="url(#outerGlowWhite)"
+        />
+    </g>
+    
+    
+    <path 
+        d="M50 95C50 95 85 80 85 50V20C85 15 80 10 75 10H25C20 10 15 15 15 20V50C15 80 50 95 50 95Z"
+        fill="url(#shineGradientWhite)"
+        opacity="0.6"
+    />
+    
+   
+    <path 
+        d="M50 91C50 91 81 77 81 50V23C81 19 78 16 75 16H25C22 16 19 19 19 23V50C19 77 50 91 50 91Z"
+        fill="none"
+        stroke="#E8EAED"
+        stroke-width="0.5"
+        opacity="0.4"
+    />
+    
+    
+    <path 
+        d="M50 86.5C50 86.5 78 73 78 48V25H22V48C22 73 50 86.5 50 86.5Z"
+        fill="#4A55FF"
+        fill-opacity="0.08"
+    />
+    
+   
+    <path 
+        d="M50 82C50 82 74 69.5 74 48V28H26V48C26 69.5 50 82 50 82Z"
+        fill="#4A55FF"
+        fill-opacity="0.05"
+    />
+    
+    
+    <g filter="url(#glow)">
+        
+        <path 
+            d="M50 35L55 46L66 51L55 56L50 67L45 56L34 51L45 46L50 35Z"
+            fill="url(#sparkGradientWhite)"
+            opacity="0.5"
+        />
+       
+        <path 
+            d="M50 38L54 46L62 50L54 54L50 62L46 54L38 50L46 46L50 38Z"
+            fill="#6366F1"
+        />
+        
+        <circle cx="50" cy="50" r="3" fill="#6366F1"/>
+    </g>
+    
+    <circle cx="30" cy="35" r="1" fill="#8B92FC" opacity="0.4"/>
+    <circle cx="70" cy="35" r="1" fill="#8B92FC" opacity="0.4"/>
+    <circle cx="35" cy="60" r="0.8" fill="#8B92FC" opacity="0.3"/>
+    <circle cx="65" cy="60" r="0.8" fill="#8B92FC" opacity="0.3"/>
+</svg>
+
+
